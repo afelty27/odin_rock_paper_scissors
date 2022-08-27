@@ -2,6 +2,14 @@
 //8/10/22
 //Odin Project Javascript rps
 
+
+const choiceBtns = Array.from(document.querySelectorAll('button'));
+
+//when button clicked, run game
+choiceBtns.forEach(element => {
+    element.addEventListener('click', game(element.id));
+});
+
 //gets random computer choice
 //returns string containing name of choice
 function getComputerChoice() {
@@ -33,16 +41,11 @@ function playRockPaperScissors(playerSelection, computerSelection) {
 }
 
 //plays game and keeps track of score
-function game() {
-    let score = [0,0];
+//input is string containing user choice
+function game(userChoice) {
     let computerChoice = getComputerChoice();
-    let userChoice = document.querySelector("input");
-
     let resultString = playRockPaperScissors(userChoice, computerChoice);
-
-    
-    score = updateScore(resultString, score);
-    
+    updateScore(resultString, score);
 }
 
 function displayWinner(arr) {
@@ -55,6 +58,8 @@ function displayWinner(arr) {
     }
 }
 
+
+//CHANGE- UPDATE SECTION OF SCREEN THAT KEEPS TRACK OF SCORE
 function updateScore(resString, arr) {
     if (resString.substring(4,5) == "W") {
         arr[0] = arr[0] + 1; 
@@ -67,7 +72,6 @@ function updateScore(resString, arr) {
 
 //
 //const choiceBtn = Array.from(document.querySelectorAll(".choiceBtn"));
-const choiceBtns = Array.from(document.querySelectorAll('button'));
-console.log(choiceBtns);
+
 //choiceBtn.forEach(item => item.addEventListener('click', alert("Hello")));
 
