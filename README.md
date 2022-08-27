@@ -1,3 +1,2 @@
-# odin_rock_paper_scissors
-
-#rock paper scissors project from foundations
+1. Install with: `npm install`
+2. Serve the app (and watch for changes): `npm start`
