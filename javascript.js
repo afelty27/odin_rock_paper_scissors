@@ -2,12 +2,17 @@
 //8/10/22
 //Odin Project Javascript rps
 
-
+let score = [0,0];
 const choiceBtns = Array.from(document.querySelectorAll('button'));
+console.log(choiceBtns);
+let scoreDiv = Array.from(document.querySelector('.displayresult'));
+console.log(scoreDiv);
 
 //when button clicked, run game
 choiceBtns.forEach(element => {
-    element.addEventListener('click', game(element.id));
+    element.addEventListener('click', function(event){
+        game(element.id, score);
+    });
 });
 
 //gets random computer choice
@@ -42,12 +47,17 @@ function playRockPaperScissors(playerSelection, computerSelection) {
 
 //plays game and keeps track of score
 //input is string containing user choice
-function game(userChoice) {
+function game(userChoice, scoreArr) {
+    console.log("PLAYED");
     let computerChoice = getComputerChoice();
     let resultString = playRockPaperScissors(userChoice, computerChoice);
-    updateScore(resultString, score);
+    scoreArr = updateScore(resultString, score);
+
+    //now change div displaying score
+    
 }
 
+//displays winner to console at end of game
 function displayWinner(arr) {
     if (arr[0]>arr[1]) {
         console.log("You Win!");
@@ -59,7 +69,9 @@ function displayWinner(arr) {
 }
 
 
-//CHANGE- UPDATE SECTION OF SCREEN THAT KEEPS TRACK OF SCORE
+//changes score tracker based on result
+//takes result string and score array
+//returns updated score array
 function updateScore(resString, arr) {
     if (resString.substring(4,5) == "W") {
         arr[0] = arr[0] + 1; 
