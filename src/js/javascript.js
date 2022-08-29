@@ -3,17 +3,21 @@
 //Odin Project Javascript rps
 
 let score = [0,0];
+
 const choiceBtns = Array.from(document.querySelectorAll('button'));
 console.log(choiceBtns);
 
-//FIXME - scoreDiv is empty array
-let scoreDiv = Array.from(document.querySelector('.displayresult'));
+let resultDiv = document.querySelectorAll('#displayresult');
+console.log(resultDiv);
+
+let scoreDiv = document.querySelectorAll('#score');
 console.log(scoreDiv);
+
 
 //when button clicked, run game
 choiceBtns.forEach(element => {
     element.addEventListener('click', function(event){
-        game(element.id, score);
+        game(element.id, score, scoreDiv);
     });
 });
 
@@ -49,11 +53,11 @@ function playRockPaperScissors(playerSelection, computerSelection) {
 
 //plays game and keeps track of score
 //input is string containing user choice
-function game(userChoice, scoreArr) {
+function game(userChoice, scoreArr, divScore) {
     console.log("PLAYED");
     let computerChoice = getComputerChoice();
     let resultString = playRockPaperScissors(userChoice, computerChoice);
-    scoreArr = updateScore(resultString, score);
+    scoreArr = updateScore(resultString, score, divScore);
 
     //now change div displaying score
     
@@ -74,18 +78,15 @@ function displayWinner(arr) {
 //changes score tracker based on result
 //takes result string and score array
 //returns updated score array
-function updateScore(resString, arr) {
+function updateScore(resString, arr, scoreText) {
     if (resString.substring(4,5) == "W") {
         arr[0] = arr[0] + 1; 
     } else if(resString.substring(4,5) == "L") {
         arr[1] = arr[1] + 1;
     }
+    console.log(scoreText);
+    scoreText.textContent = `Your Score: ${arr[0]} Computer Score: ${arr[1]}`;
+    console.log(scoreText);
     return arr;
 }
-
-
-//
-//const choiceBtn = Array.from(document.querySelectorAll(".choiceBtn"));
-
-//choiceBtn.forEach(item => item.addEventListener('click', alert("Hello")));
 
