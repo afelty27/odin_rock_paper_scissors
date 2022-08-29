@@ -7,11 +7,14 @@ let score = [0,0];
 const choiceBtns = Array.from(document.querySelectorAll('button'));
 console.log(choiceBtns);
 
-let resultDiv = document.querySelectorAll('#displayresult');
-console.log(resultDiv);
-
 let scoreDiv = document.querySelectorAll('#score');
 console.log(scoreDiv);
+
+let userDiv = document.querySelectorAll('#youchoice');
+console.log(userDiv);
+
+let compDiv = document.querySelectorAll('#compchoice');
+console.log(compDiv);
 
 
 //when button clicked, run game
@@ -84,7 +87,7 @@ function updateScore(resString, arr, scoreText) {
     } else if(resString.substring(4,5) == "L") {
         arr[1] = arr[1] + 1;
     }
-    console.log(scoreText);
+    console.log(arr);
     scoreText.textContent = `Your Score: ${arr[0]} Computer Score: ${arr[1]}`;
     console.log(scoreText);
     return arr;
