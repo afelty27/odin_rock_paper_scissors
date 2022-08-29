@@ -20,7 +20,7 @@ console.log(compDiv);
 //when button clicked, run game
 choiceBtns.forEach(element => {
     element.addEventListener('click', function(event){
-        game(element.id, score, scoreDiv);
+        game(element.id, score, scoreDiv, userDiv, compDiv);
     });
 });
 
@@ -56,14 +56,15 @@ function playRockPaperScissors(playerSelection, computerSelection) {
 
 //plays game and keeps track of score
 //input is string containing user choice
-function game(userChoice, scoreArr, divScore) {
+function game(userChoice, scoreArr, divScore, divUser, divComp) {
     console.log("PLAYED");
     let computerChoice = getComputerChoice();
-    let resultString = playRockPaperScissors(userChoice, computerChoice);
-    scoreArr = updateScore(resultString, score, divScore);
 
-    //now change div displaying score
-    
+    divUser.textContent = `You chose ${userChoice}`;
+    divComp.textContent = `The Computer chose ${computerChoice}`;
+
+    let resultString = playRockPaperScissors(userChoice, computerChoice);
+    scoreArr = updateScore(resultString, score, divScore);    
 }
 
 //displays winner to console at end of game
