@@ -13,6 +13,8 @@ console.log(scoreDiv);
 let userDiv = document.querySelectorAll('#youchoice');
 console.log(userDiv);
 
+test = document.createElement('div');
+
 let compDiv = document.querySelectorAll('#compchoice');
 console.log(compDiv);
 
