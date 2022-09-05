@@ -7,15 +7,15 @@ let score = [0,0];
 const choiceBtns = Array.from(document.querySelectorAll('button'));
 console.log(choiceBtns);
 
-let scoreDiv = document.querySelectorAll('#score');
+let scoreDiv = document.querySelector('#score');
 console.log(scoreDiv);
 
-let userDiv = document.querySelectorAll('#youchoice');
+let userDiv = document.querySelector('#youchoice');
 console.log(userDiv);
 
 test = document.createElement('div');
 
-let compDiv = document.querySelectorAll('#compchoice');
+let compDiv = document.querySelector('#compchoice');
 console.log(compDiv);
 
 
@@ -91,8 +91,9 @@ function updateScore(resString, arr, scoreText) {
         arr[1] = arr[1] + 1;
     }
     console.log(arr);
-    scoreText.textContent = `Your Score: ${arr[0]} Computer Score: ${arr[1]}`;
+    console.log("here");
     console.log(scoreText);
+    scoreText.textContent = `Your Score: ${arr[0]} Computer Score: ${arr[1]}`;
     return arr;
 }
 
