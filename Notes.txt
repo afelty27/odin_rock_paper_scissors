@@ -1,0 +1,35 @@
+HTML Elements:
+
+Body 
+    Sidebar
+        Image at top
+        UL (6)
+        UL (3)
+    Search Header
+        Row (search icon, search bar, bell icon, symbol, name)
+        Row (icon, message; 3 buttons (new, upload, share))
+    Content Area
+        Your Projects header
+        Cards (6)
+        Announcement header
+        Announcement Card
+            Three sections
+        Trending header
+        Trending Card
+
+
+Grid Layout
+    Large Grid (12x12)
+        SideBar (cols = 1-?; rows = 1-12)
+
+        Header (cols = ? = 12; rows = 1-3)
+            Nested Grid ()
+
+        Content (cols = ?-13, rows = 3-13)
+            Your Projects Header
+            Your Projects Cards
+                Nested Grid()
+            Announcements Header
+            Announcements Cards
+            Trending Header
+            Trending Card
