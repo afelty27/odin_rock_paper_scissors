@@ -2,8 +2,9 @@ HTML Elements:
 
 Body 
     Sidebar
+        Grid(2 cols - 1 small, one large; 3 rows?)
         Image at top
-        UL (6)
+        UL (6) - Make flex row; button and then text
         UL (3)
     Search Header
         Row (search icon, search bar, bell icon, symbol, name)
@@ -33,3 +34,15 @@ Grid Layout
             Announcements Cards
             Trending Header
             Trending Card
+
+
+
+
+
+
+
+
+
+
+
+            
