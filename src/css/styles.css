@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vw;
+}
+
+.sidebar {
+  background-color: #0ea5e9;
+
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.navBar {
+  background-color: white;
+}
+
+.content {
+  background-color: #d4d4d4;
+}
