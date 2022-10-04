@@ -48,7 +48,7 @@ body {
   grid-template-rows: 40% 60%;
 }
 
-.navTop {
+.navTop, .navBottom, .welcome-message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,31 @@ body {
   background-color: lightgray;
   border: 2px black;
   border-radius: 7px;
+}
+
+.navBottom {
+  justify-content: space-between;
+}
+
+.welcome-message {
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #0ea5e9;
+  border-radius: 7px;
+  border: white;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.beginning {
+  margin-left: 20px;
+}
+
+.end {
+
 }
 
 .content {
