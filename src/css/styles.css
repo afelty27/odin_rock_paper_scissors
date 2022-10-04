@@ -10,11 +10,20 @@ body {
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vw;
+  color: white;
 }
 
 .sidebar {
   background-color: #0ea5e9;
 
+}
+
+.dashboard {
+  display: flex;
+}
+
+.icon-row {
+  display: flex;
 }
 
 .main {
