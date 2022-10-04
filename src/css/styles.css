@@ -8,22 +8,33 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
   height: 100vw;
-  color: white;
 }
 
 .sidebar {
   background-color: #0ea5e9;
-
+  color: white;
 }
 
 .dashboard {
   display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .icon-row {
   display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.icon-row p {
+  margin-left: 30px;
+}
+
+.break, .first {
+  margin-top: 60px;
 }
 
 .main {
@@ -33,6 +44,21 @@ body {
 
 .navBar {
   background-color: white;
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+
+.navTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  width: 250px;
+  background-color: lightgray;
+  border: 2px black;
+  border-radius: 7px;
 }
 
 .content {
